@@ -17,57 +17,54 @@ const useStyles = makeStyles({
     }
 });
 
-const GridPlayground = () => {
+export const GridPlayground = () => {
     const classes = useStyles();
 
     return (
-        // <Container
-        //     className={classes.container}
-        //     xs={12}
-        //  >
-
-        <Grid
-            container
-            className={classes.parentGrid}
-            // xs={12}
-            // spacing={3}
-        // justify='flex-start'
+        <Container
+            className={classes.container}
+            xs={12}
         >
             <Grid
-                item
                 container
-                xs={12}
-                spacing={3}
+                className={classes.parentGrid}
+                direction="column"
+                // justify="center"
+                alignItems="flex-end"
             >
-                <Card
-                    className={classes.card}
+
+                <Grid
+                    item
+                    container
+                    xs={12}
+                // spacing={3}
                 >
-                    <Typography>
-                        I am the Title
+                    <Card
+                        className={classes.card}
+                    >
+                        <Typography>
+                            I am the Title
                 </Typography>
-                    <Typography>
-                        I am happen to be the text that comes after
-                        the title. My friends call me subtext but you may call
-                        me lil S
+                        <Typography>
+                            I am happen to be the text that comes after
+                            the title. My friends call me subtext but you may call
+                            me lil S
                 </Typography>
 
-                    <Grid>
-                        <Button variant='contained' color='primary'>
-                            Button 1
-                </Button>
-                    </Grid>
-
-                    <Grid>
-                        <Button variant='contained' color='default'>
-                            Button 2
+                        <Grid item>
+                            <Button variant='contained' color='primary'>
+                                Button 1
                     </Button>
-                    </Grid>
+                            <Button variant='contained' color='default'>
+                                Button 2
+                    </Button>
+                        </Grid>
 
-                </Card >
+                    </Card >
+                </Grid>
             </Grid>
-        </Grid>
 
-        // </Container>
+        </Container>
     )
 
 }

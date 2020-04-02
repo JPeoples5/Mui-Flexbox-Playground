@@ -1,14 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import FlexPlayground from './FlexPlayground'
+import GridPlayground from './GridPlayground'
 
 function App() {
 
   
   return (
     <div>
-        <FlexPlayground/>
+        <GridPlayground/>
     </div>
   );
 }
